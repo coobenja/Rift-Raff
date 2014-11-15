@@ -83,7 +83,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 105773820}
   - 33: {fileID: 105773823}
-  - 65: {fileID: 105773822}
   - 23: {fileID: 105773821}
   m_Layer: 0
   m_Name: Arm
@@ -126,19 +125,6 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!65 &105773822
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 4cb89ff87c9c1154cb165a2160622469,
-    type: 2}
-  m_PrefabInternal: {fileID: 332535646}
-  m_GameObject: {fileID: 105773819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &105773823
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -212,6 +198,7 @@ MonoBehaviour:
   hazardhit: 0
   direction: 
   explosiontime: .5
+  health: 5
   moveIn: Horizontal_1
   jumpIn: Jump_1
   aimXIn: Horizontal_1_Aim
@@ -219,7 +206,7 @@ MonoBehaviour:
   groundMoveForce: 365
   maxSpeed: 5
   jumpForce: 500
-  airMoveForce: 50
+  airMoveForce: 100
   arm: {fileID: 0}
 --- !u!23 &285486247
 Renderer:
@@ -276,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00cbe6c5ae839a42bf68db385646086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Power: 25
+  Power: 9
 --- !u!1001 &332535646
 Prefab:
   m_ObjectHideFlags: 0
@@ -549,7 +536,7 @@ Transform:
   m_PrefabInternal: {fileID: 332535646}
   m_GameObject: {fileID: 636463495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .538367212, y: -.0679429322, z: .631023288}
+  m_LocalPosition: {x: .935658038, y: -.0679429248, z: .631023288}
   m_LocalScale: {x: .9009009, y: 1.92307699, z: 1}
   m_Children: []
   m_Father: {fileID: 105773820}
@@ -709,7 +696,7 @@ Transform:
   m_PrefabInternal: {fileID: 332535646}
   m_GameObject: {fileID: 907852207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0357236862, y: .346275568, z: 0}
+  m_LocalPosition: {x: .0357236862, y: .0447294712, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 105773820}
@@ -729,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumY: -90
   maximumY: 90
-  projectileVelocity: 30
+  projectileVelocity: 50
   forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
   triggerIn: Trigger1
   firePoint: {fileID: 636463496}
@@ -899,8 +886,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: .5
   W: .5
+  winScore: 3
   direction: Right
-  magnitude: .100000001
   leftplayer: {fileID: 285486243}
   rightplayer: {fileID: 1934621417}
 --- !u!1 &1381609942
@@ -1001,8 +988,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   X: 0
   W: .5
+  winScore: 3
   direction: Left
-  magnitude: .100000001
   leftplayer: {fileID: 285486243}
   rightplayer: {fileID: 1934621417}
 --- !u!1 &1558429395
@@ -1140,6 +1127,7 @@ GameObject:
   - 114: {fileID: 1934621421}
   - 50: {fileID: 1934621420}
   - 61: {fileID: 1934621419}
+  - 114: {fileID: 1934621424}
   m_Layer: 0
   m_Name: Player_2
   m_TagString: Player
@@ -1179,7 +1167,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 663916580}
   m_GameObject: {fileID: 1934621417}
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1.29999995
@@ -1204,6 +1192,7 @@ MonoBehaviour:
   hazardhit: 0
   direction: 
   explosiontime: 1.79999995
+  health: 5
   moveIn: Horizontal_2
   jumpIn: Jump_2
   aimXIn: Horizontal_2_Aim
@@ -1242,6 +1231,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 663916580}
   m_GameObject: {fileID: 1934621417}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1934621424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: c594fd3b8017b6d4cb71186935013586,
+    type: 2}
+  m_PrefabInternal: {fileID: 663916580}
+  m_GameObject: {fileID: 1934621417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00cbe6c5ae839a42bf68db385646086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Power: 9
 --- !u!1 &1943447885
 GameObject:
   m_ObjectHideFlags: 0
