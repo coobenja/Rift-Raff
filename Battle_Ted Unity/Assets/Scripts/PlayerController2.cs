@@ -10,7 +10,7 @@ public class PlayerController2 : MonoBehaviour {
 	public string jumpIn;
 	public string aimXIn;
 	public string aimYIn;
-	public string triggerIn;
+
 	
 	public float moveForce = 365f;
 	public float maxSpeed = 5f;
@@ -20,7 +20,6 @@ public class PlayerController2 : MonoBehaviour {
 
 	private bool grounded = false;
 	private Transform groundCheck;
-	private Transform firePoint;
 	private Transform targetPosition;
 	
 
@@ -28,7 +27,7 @@ public class PlayerController2 : MonoBehaviour {
 	void Awake () {
 		// Setting up references.
 		groundCheck = transform.Find ("groundCheck");
-		firePoint = transform.Find ("firePoint");
+
 	}
 
 	void Update() {
