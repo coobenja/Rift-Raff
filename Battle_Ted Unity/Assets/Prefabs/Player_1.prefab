@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Player_1
   m_TagString: Player
@@ -91,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.30176449, y: -.0892524421, z: .738117337}
+  m_LocalPosition: {x: -2.72740769, y: .160435677, z: .738117337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -130,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0357236862, y: .0440354049, z: 0}
+  m_LocalPosition: {x: .0357236862, y: .346275568, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -252,13 +253,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
+  hazardhit: 0
+  explosiontime: .5
   moveIn: Horizontal_1
   jumpIn: Jump_1
   aimXIn: Horizontal_1_Aim
   aimYIn: Vertical_1_Aim
-  moveForce: 200
+  groundMoveForce: 365
   maxSpeed: 5
   jumpForce: 500
+  airMoveForce: 50
   arm: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -273,9 +277,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumY: -90
   maximumY: 90
-  forceBallPrefab: {fileID: 0}
+  projectileVelocity: 30
+  forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
   triggerIn: Trigger1
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 400008}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00cbe6c5ae839a42bf68db385646086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Power: 25
+  Radius: 10000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

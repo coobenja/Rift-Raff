@@ -8,7 +8,7 @@ public class PlayerController2 : MonoBehaviour {
 	[HideInInspector]
 	public bool hazardhit = false;
 	private bool explosionhit = false;
-	public float explosiontime = 10;
+	public float explosiontime = 1.8;
 	private float explosioncount;
 
 	public string moveIn;
@@ -108,6 +108,7 @@ public class PlayerController2 : MonoBehaviour {
 		}
 		if (coll.gameObject.tag == "Explosion") {
 			explosionhit = true;
+			explosioncount = explosiontime;
 		}
 	}
 

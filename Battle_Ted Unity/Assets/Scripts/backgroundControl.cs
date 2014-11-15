@@ -18,7 +18,7 @@ public class backgroundControl : MonoBehaviour {
 		//Debug.Log (rightplayer.GetComponent<PlayerController2> ().hazardhit);
 		if (rightplayer.GetComponent<PlayerController2>().hazardhit) {
 
-			//rightplayer.GetComponent<PlayerController2>().hazardhit = false;
+			rightplayer.GetComponent<PlayerController2>().hazardhit = false;
 			if (direction == "Left") {
 				W = W + magnitude;
 			} else {
@@ -26,7 +26,7 @@ public class backgroundControl : MonoBehaviour {
 				X = magnitude + X;
 			}
 			camera.rect = new Rect(X,0,W,1);
-			Debug.Log("hitr");
+			//Debug.Log("hitr");
 		}
 		if (leftplayer.GetComponent<PlayerController2>().hazardhit) {
 			if (direction == "Left") {
@@ -36,7 +36,7 @@ public class backgroundControl : MonoBehaviour {
 				X = -magnitude + X;
 			}
 			camera.rect = new Rect(X,0,W,1);
-			//leftplayer.GetComponent<PlayerController2>().hazardhit = false;
+			leftplayer.GetComponent<PlayerController2>().hazardhit = false;
 		}
 	}
 }
