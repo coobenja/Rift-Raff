@@ -10,28 +10,25 @@ public class PlayerController2 : MonoBehaviour {
 	public string jumpIn;
 	public string aimXIn;
 	public string aimYIn;
-
-	public GameObject hand;
-	private Vector3 handLocation;
-
+	public string triggerIn;
+	
 	public float moveForce = 365f;
 	public float maxSpeed = 5f;
 	public float jumpForce = 1000f;
 
+	public GameObject arm;
 
 	private bool grounded = false;
 	private Transform groundCheck;
+	private Transform firePoint;
 	private Transform targetPosition;
-
-	private float x;
-	private Vector3 ls;
+	
 
 	// Use this for initialization
 	void Awake () {
 		// Setting up references.
-		groundCheck = transform.Find("groundCheck");
-		//targetPosition = transform.Find("targetPosition");
-		//hand = GameObject.Find ("hand_1");
+		groundCheck = transform.Find ("groundCheck");
+		firePoint = transform.Find ("firePoint");
 	}
 
 	void Update() {
@@ -57,10 +54,6 @@ public class PlayerController2 : MonoBehaviour {
 	
 		float h = Input.GetAxis (moveIn);
 
-		//handLocation.Set(Input.GetAxis(aimXIn), Input.GetAxis(aimYIn), 0);
-
-		//transform.Translate (handLocation * Time.deltaTime); 
-
 		rigidbody2D.AddForce(Vector2.right * h * moveForce);
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
@@ -81,6 +74,11 @@ public class PlayerController2 : MonoBehaviour {
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
 		}
+
+		//Shooting Projectile
+		/*if (Input.GetAxis (triggerIn) > 0) {
+			Instantiate(Projectile, firePoint, Quaternion.identity);
+		}*/
 
 	}
 }
