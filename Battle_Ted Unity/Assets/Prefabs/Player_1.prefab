@@ -251,7 +251,6 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 500
   airMoveForce: 100
-  arm: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumY: -90
   maximumY: 90
-  projectileVelocity: 50
+  projectileVelocity: 35
   forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
   triggerIn: Trigger1
   firePoint: {fileID: 400008}

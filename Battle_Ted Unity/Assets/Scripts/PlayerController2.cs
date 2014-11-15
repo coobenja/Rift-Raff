@@ -7,7 +7,7 @@ public class PlayerController2 : MonoBehaviour {
 	public bool jump = false;
 	[HideInInspector]
 	public int hazardhit = 0;
-	public string direction;
+	//public string direction;
 	private bool explosionhit = false;
 	public float explosiontime = 1.8f;
 	private float explosioncount;
@@ -25,8 +25,7 @@ public class PlayerController2 : MonoBehaviour {
 	public float jumpForce = 1000f;
 	public float airMoveForce = 50f;
 	private float moveForce;
-
-	public GameObject arm;
+	
 
 	private bool grounded = false;
 	private Transform groundCheck;
@@ -93,6 +92,7 @@ public class PlayerController2 : MonoBehaviour {
 						}
 				}
 
+
 		if(jump)
 		{
 			// Add a vertical force to the player.
@@ -101,7 +101,7 @@ public class PlayerController2 : MonoBehaviour {
 			// Make sure the player can't jump again until the jump conditions from Update are satisfied.
 			jump = false;
 		}
-
+		//print (rigidbody2D.velocity.sqrMagnitude);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
@@ -112,13 +112,13 @@ public class PlayerController2 : MonoBehaviour {
 		if (coll.gameObject.tag == "Explosion") {
 			explosionhit = true;
 			explosioncount = explosiontime;
-
 		}
-		if (coll.gameObject.tag == "Ground" && rigidbody2D.velocity.sqrMagnitude > 0) {
-			health -= 1;
-			Debug.Log ("Ouch");
+		if (coll.gameObject.tag == "Ground" /*&& coll.relativeVelocity.magnitude > 0*/)
+		{
+			print ("Ouch");
 		}
 	}
+
 
 	/*void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Explosion") {
