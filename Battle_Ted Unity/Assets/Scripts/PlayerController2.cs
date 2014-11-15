@@ -8,7 +8,7 @@ public class PlayerController2 : MonoBehaviour {
 	[HideInInspector]
 	public bool hazardhit = false;
 	private bool explosionhit = false;
-	public float explosiontime = 1.8;
+	public float explosiontime = 1.8f;
 	private float explosioncount;
 
 	public string moveIn;
@@ -79,10 +79,8 @@ public class PlayerController2 : MonoBehaviour {
 				rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
 		}
 		else {
-			print ("start");
 			explosioncount -= Time.deltaTime;
 			if (explosioncount < 0) {
-				print ("end");
 				explosionhit = false;
 				explosioncount = explosiontime;
 			}

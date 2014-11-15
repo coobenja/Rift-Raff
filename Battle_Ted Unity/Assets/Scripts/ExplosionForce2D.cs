@@ -21,7 +21,7 @@ public class ExplosionForce2D : MonoBehaviour
 		public static void AddExplosionForce (Rigidbody2D body, float expForce, Vector3 expPosition)
 		{
 				var dir = (body.transform.position - expPosition);
-				body.AddForce (dir.normalized * expForce * calc);
+				body.AddForce (dir.normalized * expForce);
 		}
 
 

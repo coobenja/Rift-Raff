@@ -14,7 +14,7 @@ public class backgroundControl : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		//Debug.Log (rightplayer.GetComponent<PlayerController2> ().hazardhit);
 		if (rightplayer.GetComponent<PlayerController2>().hazardhit) {
 
