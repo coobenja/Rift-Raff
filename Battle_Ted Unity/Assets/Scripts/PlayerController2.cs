@@ -73,7 +73,7 @@ public class PlayerController2 : MonoBehaviour {
 			rigidbody2D.AddForce(Vector2.right * h * moveForce);
 
 		//Limit player speed to max
-		if (!explosionhit) {
+		if (!explosionhit && grounded) {
 			if (Mathf.Abs (rigidbody2D.velocity.x) > maxSpeed)
 				// ... set the player's velocity to the maxSpeed in the x axis.
 				rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
@@ -89,7 +89,7 @@ public class PlayerController2 : MonoBehaviour {
 			// ... set the player's velocity to the maxSpeed in the x axis.
 			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, Mathf.Sign(rigidbody2D.velocity.y) * maxSpeed*2);
 
-		if(jump && !explosionhit)
+		if(jump)
 		{
 			// Add a vertical force to the player.
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));

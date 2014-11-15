@@ -148,13 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
+  hazardhit: 0
+  explosiontime: 1.79999995
   moveIn: Horizontal_2
   jumpIn: Jump_2
   aimXIn: Horizontal_2_Aim
   aimYIn: Vertical_2_Aim
-  moveForce: 200
+  groundMoveForce: 365
   maxSpeed: 5
   jumpForce: 500
+  airMoveForce: 50
   arm: {fileID: 0}
 --- !u!23 &129424328
 Renderer:
@@ -226,7 +229,7 @@ Transform:
   m_PrefabInternal: {fileID: 1050017416}
   m_GameObject: {fileID: 496690910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0357236862, y: .0440354049, z: 0}
+  m_LocalPosition: {x: .0357236862, y: .346275568, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1554365852}
@@ -482,6 +485,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!1 &1277145303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1277145307}
+  - 33: {fileID: 1277145306}
+  - 23: {fileID: 1277145305}
+  - 61: {fileID: 1277145304}
+  m_Layer: 8
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1277145304
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277145303}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!23 &1277145305
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277145303}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1277145306
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277145303}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1277145307
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277145303}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: 20.4203072, y: 6.59421396, z: 0}
+  m_LocalScale: {x: 31.7099991, y: 5.17000008, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &1358527699
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,9 +615,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1358527699}
-  m_LocalRotation: {x: 0, y: 0, z: -.394613028, w: .918847501}
-  m_LocalPosition: {x: -21.9397888, y: -1.10714412, z: 0}
-  m_LocalScale: {x: 22.2700005, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: -16.7938309, y: 6.59421062, z: 0}
+  m_LocalScale: {x: 31.7099991, y: 5.17000008, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -860,6 +931,7 @@ GameObject:
   - 114: {fileID: 1766675548}
   - 50: {fileID: 1766675547}
   - 61: {fileID: 1766675546}
+  - 114: {fileID: 1766675545}
   m_Layer: 0
   m_Name: Player_1
   m_TagString: Player
@@ -867,6 +939,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1766675545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 4cb89ff87c9c1154cb165a2160622469,
+    type: 2}
+  m_PrefabInternal: {fileID: 1050017416}
+  m_GameObject: {fileID: 1766675544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00cbe6c5ae839a42bf68db385646086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Power: 25
 --- !u!61 &1766675546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -908,13 +993,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
+  hazardhit: 0
+  explosiontime: .5
   moveIn: Horizontal_1
   jumpIn: Jump_1
   aimXIn: Horizontal_1_Aim
   aimYIn: Vertical_1_Aim
-  moveForce: 200
+  groundMoveForce: 365
   maxSpeed: 5
   jumpForce: 500
+  airMoveForce: 50
   arm: {fileID: 0}
 --- !u!23 &1766675549
 Renderer:
