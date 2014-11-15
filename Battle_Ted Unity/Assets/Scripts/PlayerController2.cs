@@ -5,6 +5,8 @@ public class PlayerController2 : MonoBehaviour {
 
 	[HideInInspector]
 	public bool jump = false;
+	[HideInInspector]
+	public bool hazardhit = false;
 
 	public string moveIn;
 	public string jumpIn;
@@ -39,7 +41,6 @@ public class PlayerController2 : MonoBehaviour {
 		// If the jump button is pressed and the player is grounded then the player should jump.
 		if (Input.GetButtonDown (jumpIn) && grounded) {
 			jump = true;
-			Debug.Log (jumpIn);
 		}
 
 
@@ -80,5 +81,13 @@ public class PlayerController2 : MonoBehaviour {
 			Instantiate(Projectile, firePoint, Quaternion.identity);
 		}*/
 
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.tag == "Hazard") {
+			hazardhit = true;
+			print("hit");
+		}
+		
 	}
 }

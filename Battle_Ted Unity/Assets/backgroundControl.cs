@@ -6,16 +6,19 @@ public class backgroundControl : MonoBehaviour {
 	public float W;
 	public string direction;
 	public float magnitude;
-	//public GameObject leftplayer;
-	//public GameObject rightplayer;
+	public GameObject leftplayer;
+	public GameObject rightplayer;
 	// Use this for initialization
 	void Start () {
 		camera.rect = new Rect(X,0,W,1);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.RightArrow)) {
+	void FixedUpdate () {
+		//Debug.Log (rightplayer.GetComponent<PlayerController2> ().hazardhit);
+		if (rightplayer.GetComponent<PlayerController2>().hazardhit) {
+
+			rightplayer.GetComponent<PlayerController2>().hazardhit = false;
 			if (direction == "Left") {
 				W = W + magnitude;
 			} else {
@@ -23,8 +26,9 @@ public class backgroundControl : MonoBehaviour {
 				X = magnitude + X;
 			}
 			camera.rect = new Rect(X,0,W,1);
+			Debug.Log("hitr");
 		}
-		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+		if (leftplayer.GetComponent<PlayerController2>().hazardhit) {
 			if (direction == "Left") {
 				W = W - magnitude;
 			} else {
@@ -32,6 +36,7 @@ public class backgroundControl : MonoBehaviour {
 				X = -magnitude + X;
 			}
 			camera.rect = new Rect(X,0,W,1);
+			//leftplayer.GetComponent<PlayerController2>().hazardhit = false;
 		}
 	}
 }
