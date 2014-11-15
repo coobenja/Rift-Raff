@@ -6,7 +6,8 @@ public class PlayerController2 : MonoBehaviour {
 	[HideInInspector]
 	public bool jump = false;
 	[HideInInspector]
-	public bool hazardhit = false;
+	public int hazardhit = 0;
+	public string direction;
 	private bool explosionhit = false;
 	public float explosiontime = 1.8f;
 	private float explosioncount;
@@ -30,11 +31,16 @@ public class PlayerController2 : MonoBehaviour {
 	private bool grounded = false;
 	private Transform groundCheck;
 	private Transform targetPosition;
+
+	private GameObject leftCam;// = GameObject.Find("BackgroundCameraLeft");
+	private GameObject rightCam;// = GameObject.Find("BackgroundCameraRight");
 	
 
 	// Use this for initialization
 	void Awake () {
 		// Setting up references.
+		leftCam = GameObject.Find("BackgroundCameraLeft");
+		rightCam = GameObject.Find("BackgroundCameraRight");
 		explosioncount = explosiontime;
 		groundCheck = transform.Find ("groundCheck");
 
@@ -100,11 +106,13 @@ public class PlayerController2 : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Hazard") {
-			hazardhit = true;
+			hazardhit ++;
+			//leftCam.GetComponent<backgroundControl>().takeDamage("left");
 		}
 		if (coll.gameObject.tag == "Explosion") {
 			explosionhit = true;
 			explosioncount = explosiontime;
+
 		}
 		if (coll.gameObject.tag == "Ground" && rigidbody2D.velocity.sqrMagnitude > 0) {
 			health -= 1;

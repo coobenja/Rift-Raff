@@ -4,10 +4,12 @@ using System.Collections;
 public class backgroundControl : MonoBehaviour {
 	public float X;
 	public float W;
+	private float score = 0;
 	public string direction;
 	public float magnitude;
 	public GameObject leftplayer;
 	public GameObject rightplayer;
+	private bool done = true;
 	// Use this for initialization
 	void Start () {
 		camera.rect = new Rect(X,0,W,1);
@@ -15,10 +17,30 @@ public class backgroundControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log (rightplayer.GetComponent<PlayerController2> ().hazardhit);
-		if (rightplayer.GetComponent<PlayerController2>().hazardhit) {
+		score = -rightplayer.GetComponent<PlayerController2>().hazardhit + leftplayer.GetComponent<PlayerController2>().hazardhit;
+		if (direction == "Left") {
+			W = 0.5f + magnitude*score;
+		} else {
+			W = 0.5f - magnitude*score;
+			X = magnitude*score + 0.5f;
+		}
+		print (W);
+		camera.rect = new Rect(X,0,W,1);
 
-			rightplayer.GetComponent<PlayerController2>().hazardhit = false;
+		/*if (rightplayer.GetComponent<PlayerController2> ().hazardhit) {
+			takeDamage("right");
+		}
+		if (leftplayer.GetComponent<PlayerController2> ().hazardhit) {
+			done = takeDamage("left");
+		}
+		if (done)
+						print (done);//leftplayer.GetComponent<PlayerController2> ().hazardhit = false;
+		//print (done);*/
+	}
+
+	/*void takeDamage(string dir) {
+		//score = rightplayer.GetComponent<PlayerController2>().hazardhit - leftplayer.GetComponent<PlayerController2>().hazardhit;
+		if (dir == "right") {
 			if (direction == "Left") {
 				W = W + magnitude;
 			} else {
@@ -26,9 +48,9 @@ public class backgroundControl : MonoBehaviour {
 				X = magnitude + X;
 			}
 			camera.rect = new Rect(X,0,W,1);
-			//Debug.Log("hitr");
+			print ("hit");
 		}
-		if (leftplayer.GetComponent<PlayerController2>().hazardhit) {
+		if (dir == "left") {
 			if (direction == "Left") {
 				W = W - magnitude;
 			} else {
@@ -36,7 +58,8 @@ public class backgroundControl : MonoBehaviour {
 				X = -magnitude + X;
 			}
 			camera.rect = new Rect(X,0,W,1);
-			leftplayer.GetComponent<PlayerController2>().hazardhit = false;
+			print ("hit");
 		}
-	}
+	}*/
 }
+

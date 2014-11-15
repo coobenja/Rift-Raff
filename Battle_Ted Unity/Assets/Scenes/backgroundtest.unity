@@ -210,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 0
   hazardhit: 0
+  direction: 
   explosiontime: .5
   moveIn: Horizontal_1
   jumpIn: Jump_1
@@ -276,7 +277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Power: 25
-  Radius: 10000
 --- !u!1001 &332535646
 Prefab:
   m_ObjectHideFlags: 0
@@ -595,7 +595,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c594fd3b8017b6d4cb71186935013586, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c594fd3b8017b6d4cb71186935013586, type: 2}
@@ -796,8 +796,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 955459333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.91274834, y: -3.12281609, z: 6.31447601}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.91274834, y: -16.5950222, z: 6.31447601}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1146,7 +1146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1934621418
 Transform:
   m_ObjectHideFlags: 0
@@ -1202,7 +1202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 0
   hazardhit: 0
-  explosiontime: 10
+  direction: 
+  explosiontime: 1.79999995
   moveIn: Horizontal_2
   jumpIn: Jump_2
   aimXIn: Horizontal_2_Aim
