@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ExplosionForce2D : MonoBehaviour
 {
-	public float Power = 25;
+	public float Power = 15;
 	
 		// Use this for initialization
 		void Start ()

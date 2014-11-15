@@ -10,6 +10,8 @@ public class PlayerController2 : MonoBehaviour {
 	private bool explosionhit = false;
 	public float explosiontime = 1.8f;
 	private float explosioncount;
+	public int health = 5;
+
 
 	public string moveIn;
 	public string jumpIn;
@@ -74,20 +76,16 @@ public class PlayerController2 : MonoBehaviour {
 
 		//Limit player speed to max
 		if (!explosionhit && grounded) {
-			if (Mathf.Abs (rigidbody2D.velocity.x) > maxSpeed)
+						if (Mathf.Abs (rigidbody2D.velocity.x) > maxSpeed)
 				// ... set the player's velocity to the maxSpeed in the x axis.
-				rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
-		}
-		else {
-			explosioncount -= Time.deltaTime;
-			if (explosioncount < 0) {
-				explosionhit = false;
-				explosioncount = explosiontime;
-			}
-		}
-		if(Mathf.Abs(rigidbody2D.velocity.y) > maxSpeed*2)
-			// ... set the player's velocity to the maxSpeed in the x axis.
-			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, Mathf.Sign(rigidbody2D.velocity.y) * maxSpeed*2);
+								rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
+				} else {
+						explosioncount -= Time.deltaTime;
+						if (explosioncount < 0) {
+								explosionhit = false;
+								explosioncount = explosiontime;
+						}
+				}
 
 		if(jump)
 		{
@@ -107,6 +105,10 @@ public class PlayerController2 : MonoBehaviour {
 		if (coll.gameObject.tag == "Explosion") {
 			explosionhit = true;
 			explosioncount = explosiontime;
+		}
+		if (coll.gameObject.tag == "Ground" && rigidbody2D.velocity.sqrMagnitude > 0) {
+			health -= 1;
+			Debug.Log ("Ouch");
 		}
 	}
 

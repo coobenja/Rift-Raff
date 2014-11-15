@@ -45,7 +45,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 33: {fileID: 3300002}
-  - 65: {fileID: 6500000}
   - 23: {fileID: 2300002}
   m_Layer: 0
   m_Name: Arm
@@ -92,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.72740769, y: .160435677, z: .738117337}
+  m_LocalPosition: {x: -8.30176449, y: -.0892524421, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -131,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0357236862, y: .346275568, z: 0}
+  m_LocalPosition: {x: .0357236862, y: .0447294712, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -144,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .538367212, y: -.0679429322, z: .631023288}
+  m_LocalPosition: {x: .935658038, y: -.0679429248, z: .631023288}
   m_LocalScale: {x: .9009009, y: 1.92307699, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -229,18 +228,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1.00000012, y: 2}
   m_Center: {x: 5.96046448e-08, y: 0}
---- !u!65 &6500000
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,6 +242,7 @@ MonoBehaviour:
   jump: 0
   hazardhit: 0
   explosiontime: .5
+  health: 5
   moveIn: Horizontal_1
   jumpIn: Jump_1
   aimXIn: Horizontal_1_Aim
@@ -262,7 +250,7 @@ MonoBehaviour:
   groundMoveForce: 365
   maxSpeed: 5
   jumpForce: 500
-  airMoveForce: 50
+  airMoveForce: 100
   arm: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -277,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumY: -90
   maximumY: 90
-  projectileVelocity: 30
+  projectileVelocity: 50
   forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
   triggerIn: Trigger1
   firePoint: {fileID: 400008}
@@ -292,8 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00cbe6c5ae839a42bf68db385646086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Power: 25
-  Radius: 10000
+  Power: 9
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
