@@ -18,7 +18,7 @@ public class backgroundControl : MonoBehaviour {
 		//Debug.Log (rightplayer.GetComponent<PlayerController2> ().hazardhit);
 		if (rightplayer.GetComponent<PlayerController2>().hazardhit) {
 
-			rightplayer.GetComponent<PlayerController2>().hazardhit = false;
+			//rightplayer.GetComponent<PlayerController2>().hazardhit = false;
 			if (direction == "Left") {
 				W = W + magnitude;
 			} else {

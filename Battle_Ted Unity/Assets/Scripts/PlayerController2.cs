@@ -7,6 +7,9 @@ public class PlayerController2 : MonoBehaviour {
 	public bool jump = false;
 	[HideInInspector]
 	public bool hazardhit = false;
+	private bool explosionhit = false;
+	public float explosiontime = 10;
+	private float explosioncount;
 
 	public string moveIn;
 	public string jumpIn;
@@ -14,9 +17,11 @@ public class PlayerController2 : MonoBehaviour {
 	public string aimYIn;
 
 	
-	public float moveForce = 365f;
+	public float groundMoveForce = 365f;
 	public float maxSpeed = 5f;
 	public float jumpForce = 1000f;
+	public float airMoveForce = 50f;
+	private float moveForce;
 
 	public GameObject arm;
 
@@ -28,6 +33,7 @@ public class PlayerController2 : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		// Setting up references.
+		explosioncount = explosiontime;
 		groundCheck = transform.Find ("groundCheck");
 
 	}
@@ -54,19 +60,38 @@ public class PlayerController2 : MonoBehaviour {
 	
 		float h = Input.GetAxis (moveIn);
 
-		rigidbody2D.AddForce(Vector2.right * h * moveForce);
+		if (grounded)
+						moveForce = groundMoveForce;
+				else 
+						moveForce = airMoveForce;
+
+		//rigidbody2D.AddForce(Vector2.right * h * moveForce);
 
 		// If the player is changing direction (h has a different sign to velocity.x) or hasn't reached maxSpeed yet...
-		if(h * rigidbody2D.velocity.x < maxSpeed)
+		if(h * rigidbody2D.velocity.x < maxSpeed && !explosionhit)
 			// ... add a force to the player.
 			rigidbody2D.AddForce(Vector2.right * h * moveForce);
 
 		//Limit player speed to max
-		if(Mathf.Abs(rigidbody2D.velocity.x) > maxSpeed)
+		if (!explosionhit) {
+			if (Mathf.Abs (rigidbody2D.velocity.x) > maxSpeed)
+				// ... set the player's velocity to the maxSpeed in the x axis.
+				rigidbody2D.velocity = new Vector2 (Mathf.Sign (rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
+		}
+		else {
+			print ("start");
+			explosioncount -= Time.deltaTime;
+			if (explosioncount < 0) {
+				print ("end");
+				explosionhit = false;
+				explosioncount = explosiontime;
+			}
+		}
+		if(Mathf.Abs(rigidbody2D.velocity.y) > maxSpeed*2)
 			// ... set the player's velocity to the maxSpeed in the x axis.
-			rigidbody2D.velocity = new Vector2(Mathf.Sign(rigidbody2D.velocity.x) * maxSpeed, rigidbody2D.velocity.y);
+			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, Mathf.Sign(rigidbody2D.velocity.y) * maxSpeed*2);
 
-		if(jump)
+		if(jump && !explosionhit)
 		{
 			// Add a vertical force to the player.
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
@@ -75,17 +100,14 @@ public class PlayerController2 : MonoBehaviour {
 			jump = false;
 		}
 
-		//Shooting Projectile
-		/*if (Input.GetAxis (triggerIn) > 0) {
-			Instantiate(Projectile, firePoint, Quaternion.identity);
-		}*/
-
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Hazard") {
 			hazardhit = true;
-			print("hit");
+		}
+		if (coll.gameObject.tag == "Explosion") {
+			explosionhit = true;
 		}
 		
 	}

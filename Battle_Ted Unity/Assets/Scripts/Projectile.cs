@@ -12,4 +12,8 @@ public class Projectile : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+
+	}
 }
