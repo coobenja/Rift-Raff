@@ -109,6 +109,11 @@ public class PlayerController2 : MonoBehaviour {
 		if (coll.gameObject.tag == "Explosion") {
 			explosionhit = true;
 		}
-		
 	}
+
+	/*void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "Explosion") {
+			explosionhit = true;
+		}
+	}*/
 }

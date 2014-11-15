@@ -13,6 +13,7 @@ public class ExplosionForce2D : MonoBehaviour
 		}
 
 		void OnCollisionEnter2D(Collision2D coll) {
+		//print ("hit");
 			if (coll.gameObject.tag == "Explosion") {
 				AddExplosionForce(this.rigidbody2D, Power * 100, coll.transform.position, Radius);
 			}
