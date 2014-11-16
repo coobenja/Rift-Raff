@@ -33,8 +33,11 @@ public class backgroundControl : MonoBehaviour {
 			cameraX = (magnitude*score)*70.0f;
 		}
 		camera.rect = new Rect(X,0,W,1);
-		if (Mathf.Abs(score) >= winScore) {
-			Application.LoadLevel("end");
+		if (score >= winScore) {
+			Application.LoadLevel("end_jalakor");
+		}
+		if (score <= winScore) {
+			Application.LoadLevel("end_joe");
 		}
 
 	}
