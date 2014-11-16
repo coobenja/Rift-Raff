@@ -16,10 +16,15 @@ public class ArmRotation : MonoBehaviour {
 
 	public string triggerIn;
 
-	public Transform firePoint;
+	private Transform firePoint;
+	public Transform firePointHand;
+	public Transform firePointHammer;
+	public bool hasHammer = false;
+	public GameObject myHammer;
 
 	void Awake () {
 		//firePoint = transform.Find ("firePoint");
+
 	}
 
 	void Update () {
@@ -33,6 +38,17 @@ public class ArmRotation : MonoBehaviour {
 		
 		transform.rotation = yQuaternion;
 
+
+		if (hasHammer) 
+		{
+			firePoint = firePointHammer;
+			myHammer.SetActive(true);
+		}
+		else
+		{
+			firePoint = firePointHand;
+			myHammer.SetActive(false);
+		}
 
 
 		//Shooting mechanics
