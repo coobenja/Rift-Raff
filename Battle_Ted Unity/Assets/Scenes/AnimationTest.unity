@@ -98,7 +98,7 @@ Transform:
   m_GameObject: {fileID: 105773819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .489930153, y: .0452614129, z: 0}
-  m_LocalScale: {x: 1.11000001, y: .519999981, z: 1}
+  m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children:
   - {fileID: 636463496}
   - {fileID: 1951908447}
@@ -557,7 +557,7 @@ Transform:
   m_PrefabInternal: {fileID: 1311222736}
   m_GameObject: {fileID: 285486243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.72740769, y: .160435677, z: .738117337}
+  m_LocalPosition: {x: -1.8157115, y: -16.2500954, z: .738117337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1589041189}
@@ -1103,7 +1103,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1122,7 +1122,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 869848003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -9.14168739, z: -10}
+  m_LocalPosition: {x: 0, y: .279174805, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1520,11 +1520,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4cb89ff87c9c1154cb165a2160622469, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.72740769
+      value: -1.8157115
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4cb89ff87c9c1154cb165a2160622469, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .160435677
+      value: -16.2500954
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4cb89ff87c9c1154cb165a2160622469, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1584,6 +1584,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 89f833a75f11bf54da5bf15d5ba9a7ee,
         type: 3}
+    - target: {fileID: 400004, guid: 4cb89ff87c9c1154cb165a2160622469, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 4cb89ff87c9c1154cb165a2160622469, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 2300002, guid: 4cb89ff87c9c1154cb165a2160622469, type: 2}

@@ -124,7 +124,7 @@ public class PlayerController2 : MonoBehaviour {
 		}
 		if (coll.gameObject.tag == "Ground" /*&& coll.relativeVelocity.magnitude > 0*/)
 		{
-			print ("Ouch");
+			//print ("Ouch");
 		}
 	}
 
