@@ -12,6 +12,7 @@ public class PlayerController2 : MonoBehaviour {
 	public float explosiontime = 1.8f;
 	private float explosioncount;
 	public int health = 5;
+	private Animator animator;
 
 
 	public string moveIn;
@@ -30,16 +31,12 @@ public class PlayerController2 : MonoBehaviour {
 	private bool grounded = false;
 	private Transform groundCheck;
 	private Transform targetPosition;
-
-	private GameObject leftCam;// = GameObject.Find("BackgroundCameraLeft");
-	private GameObject rightCam;// = GameObject.Find("BackgroundCameraRight");
 	
 
 	// Use this for initialization
 	void Awake () {
 		// Setting up references.
-		leftCam = GameObject.Find("BackgroundCameraLeft");
-		rightCam = GameObject.Find("BackgroundCameraRight");
+		animator = this.GetComponent<Animator>();
 		explosioncount = explosiontime;
 		groundCheck = transform.Find ("groundCheck");
 
@@ -66,6 +63,15 @@ public class PlayerController2 : MonoBehaviour {
 	void FixedUpdate () {
 	
 		float h = Input.GetAxis (moveIn);
+
+		if (h > 0)
+		{
+			animator.SetInteger("Direction", 0);
+		}
+		else if (h < 0)
+		{
+			animator.SetInteger("Direction", 1);
+		}
 
 		if (grounded)
 						moveForce = groundMoveForce;
