@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class backgroundControl : MonoBehaviour {
+	[HideInInspector]
+	public float cameraX;
 	public float X;
 	public float W;
 	private float W2;
@@ -16,6 +18,7 @@ public class backgroundControl : MonoBehaviour {
 	void Start () {
 		camera.rect = new Rect(X,0,W,1);
 		magnitude = 0.5f / winScore;
+		cameraX = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -27,11 +30,13 @@ public class backgroundControl : MonoBehaviour {
 		} else {
 			W = 0.5f - magnitude*score;
 			X = magnitude*score + 0.5f;
+			cameraX = (magnitude*score)*70.0f;
 		}
 		camera.rect = new Rect(X,0,W,1);
 		if (Mathf.Abs(score) >= winScore) {
 			Application.LoadLevel("end");
 		}
+
 	}
 }
 
