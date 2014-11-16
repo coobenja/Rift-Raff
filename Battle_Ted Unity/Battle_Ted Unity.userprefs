@@ -1,12 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\backgroundControl.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ArmRotation.cs">
     <Files>
-      <File FileName="Assets\Scripts\backgroundControl.cs" Line="17" Column="18" />
-      <File FileName="Assets\Scripts\ExplosionForce2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerController2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ArmRotation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Projectile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ArmRotation.cs" Line="39" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
