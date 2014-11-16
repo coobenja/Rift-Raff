@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.30176449, y: -.0892524421, z: 0}
+  m_LocalPosition: {x: -2.72740769, y: .160435677, z: .738117337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -264,6 +264,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumY: -90
   maximumY: 90
+  horizontalAim: Horizontal_1_Aim
+  verticalAim: Vertical_1_Aim
   projectileVelocity: 35
   forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
   triggerIn: Trigger1

@@ -7,6 +7,8 @@ public class ArmRotation : MonoBehaviour {
 	public float maximumY = 90F;
 	float rotationY = 0f;
 	Quaternion originalRotation;
+	public string horizontalAim;
+	public string verticalAim;
 
 	public float projectileVelocity;
 
@@ -22,8 +24,8 @@ public class ArmRotation : MonoBehaviour {
 
 	void Update () {
 
-		if(Input.GetAxis("Horizontal_1_Aim") != 0f  || Input.GetAxis("Vertical_1_Aim") != 0f)
-			rotationY = -90f + 180f/3.14f * Mathf.Atan2(Input.GetAxis("Horizontal_1_Aim"), Input.GetAxis ("Vertical_1_Aim"));
+		if(Input.GetAxis(horizontalAim) != 0f  || Input.GetAxis(verticalAim) != 0f)
+			rotationY = -90f + 180f/3.14f * Mathf.Atan2(Input.GetAxis(horizontalAim), Input.GetAxis (verticalAim));
 		
 		//rotationY = ClampAngle (rotationY, minimumY, maximumY);
 		
@@ -34,7 +36,7 @@ public class ArmRotation : MonoBehaviour {
 
 
 		//Shooting mechanics
-		if(Input.GetButtonDown("Trigger1"))
+		if(Input.GetButtonDown(triggerIn))
 		{
 			Rigidbody2D forceBallInstance;
 			forceBallInstance = Instantiate(forceBallPrefab, firePoint.position , yQuaternion) as Rigidbody2D;
