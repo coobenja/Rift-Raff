@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: adb57a8b04255184686b5f4bf947ac12
+guid: 037e7e50256c7084b9127f4c47c1e35f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FireBlast_Sheet_0
-    21300002: FireBlast_Sheet_1
-    21300004: FireBlast_Sheet_2
-    21300006: FireBlast_Sheet_3
+    21300000: Explosion_Sheet_0
+    21300002: Explosion_Sheet_1
+    21300004: Explosion_Sheet_2
+    21300006: Explosion_Sheet_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -47,43 +47,43 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: FireBlast_Sheet_0
+    - name: Explosion_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FireBlast_Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FireBlast_Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: FireBlast_Sheet_3
+    - name: Explosion_Sheet_1
       rect:
         serializedVersion: 2
         x: 300
         y: 0
-        width: 100
-        height: 100
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Explosion_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Explosion_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
