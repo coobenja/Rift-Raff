@@ -64,14 +64,17 @@ public class PlayerController2 : MonoBehaviour {
 	
 		float h = Input.GetAxis (moveIn);
 
-		if (h > 0)
-		{
-			animator.SetInteger("Direction", 0);
-		}
-		else if (h < 0)
-		{
-			animator.SetInteger("Direction", 1);
-		}
+		if (h > 0 && grounded) {
+			animator.SetInteger ("Direction", 2);
+		} else if (h < 0 && grounded) {
+			animator.SetInteger ("Direction", 1);
+		} else if (grounded) {
+			animator.SetInteger ("Direction", 0);
+		} else if (h < 0) {
+			animator.SetInteger ("Direction", 3);
+		} else {
+			animator.SetInteger ("Direction", 4);
+				}
 
 		if (grounded)
 						moveForce = groundMoveForce;

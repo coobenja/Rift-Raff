@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 6e8eee266fb93bc4d91eddd30609023f
+guid: 86ccf8c60467e1d4db2ae00e4f15dda3
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Joe_RunLeft_Sheet_0
-    21300002: Joe_RunLeft_Sheet_1
-    21300004: Joe_RunLeft_Sheet_2
-    21300006: Joe_RunLeft_Sheet_3
-    21300008: Joe_RunLeft_Sheet_4
-    21300010: Joe_RunLeft_Sheet_5
+    21300000: Jalakor_Left_Run_Sheet_0
+    21300002: Jalakor_Left_Run_Sheet_1
+    21300004: Jalakor_Left_Run_Sheet_2
+    21300006: Jalakor_Left_Run_Sheet_3
+    21300008: Jalakor_Left_Run_Sheet_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,63 +48,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Joe_RunLeft_Sheet_0
+    - name: Jalakor_Left_Run_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 617
-        height: 1000
+        width: 250
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Joe_RunLeft_Sheet_1
+    - name: Jalakor_Left_Run_Sheet_1
       rect:
         serializedVersion: 2
-        x: 617
+        x: 250
         y: 0
-        width: 617
-        height: 1000
+        width: 250
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Joe_RunLeft_Sheet_2
+    - name: Jalakor_Left_Run_Sheet_2
       rect:
         serializedVersion: 2
-        x: 1234
+        x: 500
         y: 0
-        width: 617
-        height: 1000
+        width: 250
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Joe_RunLeft_Sheet_3
+    - name: Jalakor_Left_Run_Sheet_3
       rect:
         serializedVersion: 2
-        x: 1851
+        x: 750
         y: 0
-        width: 617
-        height: 1000
+        width: 250
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Joe_RunLeft_Sheet_4
+    - name: Jalakor_Left_Run_Sheet_4
       rect:
         serializedVersion: 2
-        x: 2468
+        x: 1000
         y: 0
-        width: 617
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Joe_RunLeft_Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 3085
-        y: 0
-        width: 617
-        height: 1000
+        width: 250
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
