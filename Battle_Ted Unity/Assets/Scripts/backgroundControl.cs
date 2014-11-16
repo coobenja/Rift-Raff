@@ -4,7 +4,9 @@ using System.Collections;
 public class backgroundControl : MonoBehaviour {
 	public float X;
 	public float W;
+	private float W2;
 	private float score = 0;
+	private float score2 = 0;
 	public int winScore = 5;
 	public string direction;
 	private float magnitude;
@@ -20,7 +22,8 @@ public class backgroundControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		score = -rightplayer.GetComponent<PlayerController2>().hazardhit + leftplayer.GetComponent<PlayerController2>().hazardhit;
+		score2 = -rightplayer.GetComponent<PlayerController2>().hazardhit + leftplayer.GetComponent<PlayerController2>().hazardhit;
+		score = Mathf.Lerp (score, score2, .01f);
 		if (direction == "Left") {
 			W = 0.5f + magnitude*score;
 		} else {

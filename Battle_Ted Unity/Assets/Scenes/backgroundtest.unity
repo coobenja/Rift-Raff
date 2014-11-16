@@ -400,7 +400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 0
   hazardhit: 0
-  direction: 
   explosiontime: .5
   health: 5
   moveIn: Horizontal_1
@@ -411,7 +410,6 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 500
   airMoveForce: 100
-  arm: {fileID: 0}
 --- !u!23 &285486247
 Renderer:
   m_ObjectHideFlags: 0
@@ -1056,7 +1054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumY: -90
   maximumY: 90
-  projectileVelocity: 50
+  projectileVelocity: 35
   forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
   triggerIn: Trigger1
   firePoint: {fileID: 636463496}
@@ -1865,7 +1863,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 0
   hazardhit: 0
-  direction: 
   explosiontime: 1.79999995
   health: 5
   moveIn: Horizontal_2
@@ -1876,7 +1873,6 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 500
   airMoveForce: 50
-  arm: {fileID: 0}
 --- !u!23 &1934621422
 Renderer:
   m_ObjectHideFlags: 0
