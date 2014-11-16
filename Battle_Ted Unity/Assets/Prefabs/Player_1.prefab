@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: -.299623668, w: .954057515}
-  m_LocalPosition: {x: .746507466, y: -1.34838581, z: .631023288}
+  m_LocalPosition: {x: 1.42606437, y: -2.35920382, z: .631023288}
   m_LocalScale: {x: .9009009, y: 1.92307699, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -186,7 +186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.96749353, y: -2.02271008, z: 1.38989294}
+  m_LocalPosition: {x: 2.50548434, y: -.633783817, z: 1.38989294}
   m_LocalScale: {x: 1, y: .666666389, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
@@ -264,6 +264,7 @@ MonoBehaviour:
   jumpIn: Jump_1
   aimXIn: Horizontal_1_Aim
   aimYIn: Vertical_1_Aim
+  armRotation: {fileID: 11400002}
   groundMoveForce: 365
   maxSpeed: 5
   jumpForce: 650
@@ -285,8 +286,9 @@ MonoBehaviour:
   forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
   hammerPrefab: {fileID: 5000000, guid: b22230210abb6f549a3481817d0759ad, type: 2}
   triggerIn: Trigger1
-  firePoint: {fileID: 400008}
-  hasHammer: 0
+  firePointHand: {fileID: 400008}
+  firePointHammer: {fileID: 400016}
+  hasHammer: 1
   myHammer: {fileID: 100018}
 --- !u!114 &11400004
 MonoBehaviour:

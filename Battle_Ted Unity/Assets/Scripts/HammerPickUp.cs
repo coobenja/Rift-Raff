@@ -20,12 +20,14 @@ public class HammerPickUp : MonoBehaviour {
 			damageTime -= Time.deltaTime;
 			rigidbody2D.AddTorque(30f);
 			gameObject.tag = "Hazard";
+			GetComponent<SpriteRenderer>().color = Color.red;
 			//Physics2D.IgnoreCollision(forceBallPrefab.collider2D, collider2D, true);
 			//Physics2D.IgnoreCollision(explosionPrefab.collider2D, collider2D, true);
 		}
 		else
 		{
 			gameObject.tag = "Weapon";
+			GetComponent<SpriteRenderer>().color = Color.grey;
 		}
 	}
 

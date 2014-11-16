@@ -19,6 +19,8 @@ public class PlayerController2 : MonoBehaviour {
 	public string jumpIn;
 	public string aimXIn;
 	public string aimYIn;
+	
+	public ArmRotation armRotation;
 
 	
 	public float groundMoveForce = 365f;
@@ -122,9 +124,10 @@ public class PlayerController2 : MonoBehaviour {
 			explosionhit = true;
 			explosioncount = explosiontime;
 		}
-		if (coll.gameObject.tag == "Ground" /*&& coll.relativeVelocity.magnitude > 0*/)
+		if (coll.gameObject.tag == "Weapon")
 		{
-			//print ("Ouch");
+			armRotation.hasHammer = true;
+			coll.gameObject.SetActive(false);
 		}
 	}
 
