@@ -3,8 +3,7 @@ using System.Collections;
 
 public class ArmRotation : MonoBehaviour {
 	
-	public float minimumY = -90F; 
-	public float maximumY = 90F;
+
 	float rotationY = 0f;
 	Quaternion originalRotation;
 	public string horizontalAim;
@@ -13,13 +12,19 @@ public class ArmRotation : MonoBehaviour {
 	public float projectileVelocity;
 
 	public Rigidbody2D forceBallPrefab;
+	public Rigidbody2D hammerPrefab;
 
 	public string triggerIn;
 
-	public Transform firePoint;
+	private Transform firePoint;
+	public Transform firePointHand;
+	public Transform firePointHammer;
+	public bool hasHammer = false;
+	public GameObject myHammer;
 
 	void Awake () {
 		//firePoint = transform.Find ("firePoint");
+
 	}
 
 	void Update () {
@@ -34,15 +39,33 @@ public class ArmRotation : MonoBehaviour {
 		transform.rotation = yQuaternion;
 
 
+		if (hasHammer) 
+		{
+			firePoint = firePointHammer;
+			myHammer.SetActive(true);
+		}
+		else
+		{
+			firePoint = firePointHand;
+			myHammer.SetActive(false);
+		}
+
 
 		//Shooting mechanics
-		if(Input.GetButtonDown(triggerIn))
+		if(Input.GetButtonDown(triggerIn) && !hasHammer)
 		{
 			Rigidbody2D forceBallInstance;
 			forceBallInstance = Instantiate(forceBallPrefab, firePoint.position , yQuaternion) as Rigidbody2D;
 			forceBallInstance.AddForce(firePoint.right * projectileVelocity, ForceMode2D.Impulse);
 		}
-
+		//Hammer Shot
+		if(Input.GetButtonDown(triggerIn) && hasHammer)
+		{
+			Rigidbody2D hammerInstance;
+			hammerInstance = Instantiate(hammerPrefab, firePoint.position , yQuaternion) as Rigidbody2D;
+			hammerInstance.AddForce(firePoint.right * projectileVelocity, ForceMode2D.Impulse);
+			hasHammer = false;
+		}
 	}
 	
 	void Start () { 
