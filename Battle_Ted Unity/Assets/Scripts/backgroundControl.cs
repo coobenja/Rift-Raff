@@ -16,6 +16,8 @@ public class backgroundControl : MonoBehaviour {
 	public GameObject rightplayer;
 	// Use this for initialization
 	void Start () {
+		score = 0.0f;
+		score2 = 0.0f;
 		camera.rect = new Rect(X,0,W,1);
 		magnitude = 0.5f / winScore;
 		cameraX = 0.0f;
@@ -36,7 +38,7 @@ public class backgroundControl : MonoBehaviour {
 		if (score >= winScore) {
 			Application.LoadLevel("end_jalakor");
 		}
-		if (score <= winScore) {
+		if (score <= -winScore) {
 			Application.LoadLevel("end_joe");
 		}
 
