@@ -12,12 +12,10 @@ public class backgroundControl : MonoBehaviour {
 	private float magnitude;
 	public GameObject leftplayer;
 	public GameObject rightplayer;
-	private bool done = true;
 	// Use this for initialization
 	void Start () {
 		camera.rect = new Rect(X,0,W,1);
 		magnitude = 0.5f / winScore;
-		print (magnitude);
 	}
 	
 	// Update is called once per frame
@@ -34,40 +32,6 @@ public class backgroundControl : MonoBehaviour {
 		if (Mathf.Abs(score) >= winScore) {
 			Application.LoadLevel("end");
 		}
-
-		/*if (rightplayer.GetComponent<PlayerController2> ().hazardhit) {
-			takeDamage("right");
-		}
-		if (leftplayer.GetComponent<PlayerController2> ().hazardhit) {
-			done = takeDamage("left");
-		}
-		if (done)
-						print (done);//leftplayer.GetComponent<PlayerController2> ().hazardhit = false;
-		//print (done);*/
 	}
-
-	/*void takeDamage(string dir) {
-		//score = rightplayer.GetComponent<PlayerController2>().hazardhit - leftplayer.GetComponent<PlayerController2>().hazardhit;
-		if (dir == "right") {
-			if (direction == "Left") {
-				W = W + magnitude;
-			} else {
-				W = W - magnitude;
-				X = magnitude + X;
-			}
-			camera.rect = new Rect(X,0,W,1);
-			print ("hit");
-		}
-		if (dir == "left") {
-			if (direction == "Left") {
-				W = W - magnitude;
-			} else {
-				W = W + magnitude;
-				X = -magnitude + X;
-			}
-			camera.rect = new Rect(X,0,W,1);
-			print ("hit");
-		}
-	}*/
 }
 
