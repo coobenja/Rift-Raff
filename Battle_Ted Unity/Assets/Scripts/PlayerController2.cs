@@ -12,7 +12,7 @@ public class PlayerController2 : MonoBehaviour {
 	public float explosiontime = 1.8f;
 	private float explosioncount;
 	public int health = 5;
-	private Animator animator;
+	//private Animator animator;
 
 
 	public string moveIn;
@@ -20,6 +20,7 @@ public class PlayerController2 : MonoBehaviour {
 	public string aimXIn;
 	public string aimYIn;
 
+	public ArmRotation armRotation;
 	
 	public float groundMoveForce = 365f;
 	public float maxSpeed = 5f;
@@ -36,7 +37,7 @@ public class PlayerController2 : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		// Setting up references.
-		animator = this.GetComponent<Animator>();
+		//animator = this.GetComponent<Animator>();
 		explosioncount = explosiontime;
 		groundCheck = transform.Find ("groundCheck");
 
@@ -64,14 +65,14 @@ public class PlayerController2 : MonoBehaviour {
 	
 		float h = Input.GetAxis (moveIn);
 
-		if (h > 0)
+		/*if (h > 0)
 		{
 			animator.SetInteger("Direction", 0);
 		}
 		else if (h < 0)
 		{
 			animator.SetInteger("Direction", 1);
-		}
+		}*/
 
 		if (grounded)
 						moveForce = groundMoveForce;
@@ -119,9 +120,8 @@ public class PlayerController2 : MonoBehaviour {
 			explosionhit = true;
 			explosioncount = explosiontime;
 		}
-		if (coll.gameObject.tag == "Ground" /*&& coll.relativeVelocity.magnitude > 0*/)
-		{
-			print ("Ouch");
+		if (coll.gameObject.tag == "Weapon") {
+			armRotation.hasHammer = true;
 		}
 	}
 

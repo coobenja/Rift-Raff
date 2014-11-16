@@ -13,7 +13,7 @@ public class DieAfter : MonoBehaviour {
 	void Update () {
 		count -= Time.deltaTime;
 		if (count < 0) { 
-						DestroyObject (this.gameObject);
-				}
+			DestroyObject (this.gameObject);
+		}
 	}
 }
