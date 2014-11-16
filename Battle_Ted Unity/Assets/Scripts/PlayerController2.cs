@@ -11,7 +11,6 @@ public class PlayerController2 : MonoBehaviour {
 	private bool explosionhit = false;
 	public float explosiontime = 1.8f;
 	private float explosioncount;
-	public int health = 5;
 	//private Animator animator;
 
 
@@ -21,9 +20,10 @@ public class PlayerController2 : MonoBehaviour {
 	public string aimYIn;
 
 	public ArmRotation armRotation;
+	public HammerPickUp hammerPickup;
 	
 	public float groundMoveForce = 365f;
-	public float maxSpeed = 5f;
+	public float maxSpeed = 6f;
 	public float jumpForce = 1000f;
 	public float airMoveForce = 50f;
 	private float moveForce;
@@ -122,6 +122,7 @@ public class PlayerController2 : MonoBehaviour {
 		}
 		if (coll.gameObject.tag == "Weapon") {
 			armRotation.hasHammer = true;
+			coll.gameObject.SetActive(false);
 		}
 	}
 

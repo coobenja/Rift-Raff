@@ -30,8 +30,8 @@ public class HammerPickUp : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Player") {
-			Object.Destroy(this.gameObject);
+		if (coll.gameObject.tag == "Player" && damageTime <= 0f) {
+			//Object.Destroy(this.gameObject);
 		}
 	}
 }

@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HammerPickUp.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController2.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerController2.cs" Line="32" Column="35" />
+      <File FileName="Assets\Scripts\HammerPickUp.cs" Line="34" Column="6" />
+      <File FileName="Assets\Scripts\PlayerController2.cs" Line="26" Column="27" />
       <File FileName="Assets\Scripts\ArmRotation.cs" Line="50" Column="28" />
-      <File FileName="Assets\Scripts\HammerPickUp.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

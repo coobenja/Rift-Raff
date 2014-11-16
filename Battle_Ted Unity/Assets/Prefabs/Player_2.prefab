@@ -351,7 +351,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: .0500000007
   m_AngularDrag: .0500000007
   m_GravityScale: 1.29999995
   m_FixedAngle: 1
@@ -384,16 +384,16 @@ MonoBehaviour:
   jump: 0
   hazardhit: 0
   explosiontime: .5
-  health: 5
   moveIn: Horizontal_2
   jumpIn: Jump_2
   aimXIn: Horizontal_2_Aim
   aimYIn: Vertical_2_Aim
   armRotation: {fileID: 11400004}
+  hammerPickup: {fileID: 0}
   groundMoveForce: 365
   maxSpeed: 5
   jumpForce: 500
-  airMoveForce: 100
+  airMoveForce: 200
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,7 +425,7 @@ MonoBehaviour:
   triggerIn: Trigger2
   firePointHand: {fileID: 400006}
   firePointHammer: {fileID: 400010}
-  hasHammer: 1
+  hasHammer: 0
   myHammer: {fileID: 100014}
 --- !u!1001 &100100000
 Prefab:
