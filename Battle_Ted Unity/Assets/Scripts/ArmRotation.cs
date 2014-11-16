@@ -16,9 +16,9 @@ public class ArmRotation : MonoBehaviour {
 
 	public string triggerIn;
 
-	private Transform firePoint;
-	public Transform firePointHand;
-	public Transform firePointHammer;
+	public Transform firePoint;
+	//public Transform firePointHand;
+	//public Transform firePointHammer;
 	public bool hasHammer = false;
 	public GameObject myHammer;
 
@@ -41,12 +41,12 @@ public class ArmRotation : MonoBehaviour {
 
 		if (hasHammer) 
 		{
-			firePoint = firePointHammer;
+			//firePoint = firePointHammer;
 			myHammer.SetActive(true);
 		}
 		else
 		{
-			firePoint = firePointHand;
+			//firePoint = firePointHand;
 			myHammer.SetActive(false);
 		}
 
