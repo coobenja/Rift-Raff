@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: -.299623668, w: .954057515}
-  m_LocalPosition: {x: 1.42606437, y: -2.35920382, z: .631023288}
+  m_LocalPosition: {x: 3.0781002, y: -4.81655455, z: .631023288}
   m_LocalScale: {x: .9009009, y: 1.92307699, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -228,8 +228,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2, y: 4}
-  m_Center: {x: 5.96046448e-08, y: 0}
+  m_Size: {x: .819999993, y: 3.68000007}
+  m_Center: {x: .0299999993, y: -.180000007}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -288,7 +288,7 @@ MonoBehaviour:
   triggerIn: Trigger1
   firePointHand: {fileID: 400008}
   firePointHammer: {fileID: 400016}
-  hasHammer: 1
+  hasHammer: 0
   myHammer: {fileID: 100018}
 --- !u!114 &11400004
 MonoBehaviour:

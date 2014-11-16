@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.03269482, y: -15.7865286, z: .738117337}
+  m_LocalPosition: {x: -4.5004468, y: -15.7670412, z: .738117337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -162,8 +162,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: 0, y: 0, z: -.673464179, w: .739219844}
-  m_LocalPosition: {x: .0235987362, y: -2.54303718, z: .631023288}
+  m_LocalRotation: {x: 0, y: 0, z: .625855327, w: -.779939175}
+  m_LocalPosition: {x: .477930516, y: -6.91401386, z: .631023288}
   m_LocalScale: {x: .9009009, y: 1.92307699, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -213,7 +213,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: .0500000007
   m_AngularDrag: .0500000007
   m_GravityScale: 1.29999995
   m_FixedAngle: 1
@@ -230,8 +230,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2, y: 4}
-  m_Center: {x: 5.96046448e-08, y: 0}
+  m_Size: {x: .579999983, y: 3.77999997}
+  m_Center: {x: .109999999, y: -.00999999978}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -327,12 +327,12 @@ MonoBehaviour:
   horizontalAim: Horizontal_2_Aim
   verticalAim: Vertical_2_Aim
   projectileVelocity: 35
-  forceBallPrefab: {fileID: 5000000, guid: 787f6009c37a15d499a6d97ba5178005, type: 2}
+  forceBallPrefab: {fileID: 5000000, guid: 3edca94b8a2295042ab7f091a4e911a3, type: 2}
   hammerPrefab: {fileID: 5000000, guid: b22230210abb6f549a3481817d0759ad, type: 2}
   triggerIn: Trigger2
   firePointHand: {fileID: 400006}
   firePointHammer: {fileID: 400010}
-  hasHammer: 1
+  hasHammer: 0
   myHammer: {fileID: 100012}
 --- !u!212 &21200000
 SpriteRenderer:
