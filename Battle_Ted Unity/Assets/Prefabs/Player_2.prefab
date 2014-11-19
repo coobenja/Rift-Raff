@@ -18,7 +18,7 @@ GameObject:
   - 95: {fileID: 9500004}
   m_Layer: 0
   m_Name: Player_2
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5004468, y: -15.7670412, z: .738117337}
+  m_LocalPosition: {x: -15.8255978, y: 11.7925043, z: .738117337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -163,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: .625855327, w: -.779939175}
-  m_LocalPosition: {x: .477930516, y: -6.91401386, z: .631023288}
+  m_LocalPosition: {x: .63204962, y: -1.17813504, z: .631023288}
   m_LocalScale: {x: .9009009, y: 1.92307699, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}

@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 100000, guid: da97cacb18a1d694a858b1c492ae2be2, type: 2}
+  ignorePlayer: Player1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

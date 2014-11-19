@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Projectile : MonoBehaviour {
 	public GameObject explosionPrefab;
+	public string ignorePlayer;
+
 	// Use this for initialization
 	void Start () {
 		//rigidbody2D.AddForce (Vector2.right * 10f, ForceMode2D.Impulse);
@@ -14,8 +16,10 @@ public class Projectile : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Rigidbody2D explosionInstance;
-		explosionInstance = Instantiate(explosionPrefab, transform.position , Quaternion.identity) as Rigidbody2D;
-		DestroyObject (this.gameObject);
+		if (coll.gameObject.tag != ignorePlayer) {
+			Rigidbody2D explosionInstance;
+			explosionInstance = Instantiate (explosionPrefab, transform.position, Quaternion.identity) as Rigidbody2D;
+			DestroyObject (this.gameObject);
+		}
 	}
 }
