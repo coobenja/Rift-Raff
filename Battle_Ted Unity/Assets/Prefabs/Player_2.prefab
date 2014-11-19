@@ -123,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.8255978, y: 11.7925043, z: .738117337}
+  m_LocalPosition: {x: 23.6847324, y: 3.57140827, z: .738117337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .38321805, y: .392985344, z: 0}
+  m_LocalPosition: {x: 0, y: .38539511, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -163,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: .625855327, w: -.779939175}
-  m_LocalPosition: {x: .63204962, y: -1.17813504, z: .631023288}
+  m_LocalPosition: {x: .339194447, y: -1.92452037, z: .631023288}
   m_LocalScale: {x: .9009009, y: 1.92307699, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: .626452565, w: .779459655}
-  m_LocalPosition: {x: .594326496, y: .0421724319, z: 0}
+  m_LocalPosition: {x: 1.03170776, y: .134695947, z: 0}
   m_LocalScale: {x: .641149819, y: .300358802, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -200,7 +200,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .9378829, y: .388619423, z: -2.23510408}
+  m_LocalPosition: {x: 1.41732216, y: .43067497, z: -2.23510408}
   m_LocalScale: {x: .696246803, y: .696247756, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -230,8 +230,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .579999983, y: 3.77999997}
-  m_Center: {x: .109999999, y: -.00999999978}
+  m_Size: {x: .819999993, y: 3.99000001}
+  m_Center: {x: 0, y: 0}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
